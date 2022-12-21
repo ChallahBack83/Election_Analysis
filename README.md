@@ -105,4 +105,8 @@ I corrected the path to write to the correct text file and ran the code. After s
 
 ## Election-Audit Summary
 
-In summary, the code created to run this analysis of the congressional election has helped us pull vital statistics on votes by candidate and county and determine the winner of this election.  With minor changes, this code is transferable to use for future election data.
+In summary, the code created to run the analysis of the congressional election has helped us pull vital statistics on votes by candidate and county and determine the winner of this election.  With minor changes, this code is transferable to use for future election data.  Some suggestions:
+
++  Currently the script pull the information based on indexing of the rows. We cannot guarantee all data will import the same, so we could import                      other dependencies, such as pandas, to create data frames. Then we can build in a script to identify data type and pull the necessary information based              on data type rather than index.
++  The current script doesn't account for error handling. We can account for that, coding in directions on how to deal with errors in the data. 
++  Perhaps we want to use this to handle different types of election data, such as from cities or states. Again, we could rename variables to make it less              dependent on county or candidate specifically and help it reference which ever data type we set with one change to the script rather than many.
